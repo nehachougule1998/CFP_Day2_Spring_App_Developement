@@ -34,4 +34,9 @@ public class HelloWorldController {
         return "Hello" + user.getFirstName() + "" + user.getLastName() + "!";
 
     }
+    //UC5
+    @PutMapping("/put/{firstName}")
+    public String sayHello(@PathVariable String firstName,@RequestParam(value = "lastName") String lastName) {
+        return "Hello" + firstName + "" + lastName + "!";
+    }
 }
